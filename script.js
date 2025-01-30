@@ -15,6 +15,22 @@ function adicionarTarefa(){
 
         //Criando o botão de excluir
         const botaoExcluir = document.createElement('button');
+        botaoExcluir.addEventListener('click', () =>{
+            listaTarefas.removeChild(itemLista);
+        });
+
+        //adicionado o botão á tarefa
+        itemLista.appendChild(botaoExcluir);
+
+        // Adicionando a tarefa à lista
+        listaTarefas.appendChild(itemLista);
+
+        // Limpando o campo de input
+        inputTarefa.value = '';
 
     }   
 }
+
+// 4. Adicionando os eventos aos elementos
+botaoAdicionar.addEventListener('click', adicionarTarefa);
+listaTarefas.addEventListener('click', marcarComoFeita);
