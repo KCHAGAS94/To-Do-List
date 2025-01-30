@@ -15,6 +15,6 @@ function adicionarTarefa(){
 
         //Criando o botão de excluir
         const botaoExcluir = document.createElement('button');
-        
-    }
+
+    }   
 }
